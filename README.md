@@ -64,8 +64,8 @@
   9) Setting proportions of expenses by the occupation of the user
 
 **Expected files and source codes:**
-  1. <username>.txt
-  2. report_<username>.txt
+  1. `<username>`.txt
+  2. `report_<username>`.txt
   
 **Design**
   - User Manual
