@@ -2,7 +2,7 @@
 
 # Problem Statement:
   - A) Purpose
-     To provide the user a more efficient way to edit and view financial records. The program can automatically warn the user
+#     To provide the user a more efficient way to edit and view financial records. The program can automatically warn the user
      if the expenses reach the budget. 
      
   - B) Problem Setting
@@ -12,12 +12,12 @@
   
   
   - D) Data structures
-       - A) User file (user.txt)
-        | Field Name | Type           | Width | Description                                     |
-        -----------------------------------------------------------------------------------------
-        | Name       | String         |  30   | User's name                                     |
-        | Income     | Double         |  15   | User's income monthly                           |
-        | Expense    | Double (Array) |  4    | Food, transportation, entertainment, debts/loans|
+#       - A) User file (user.txt)
+#        | Field Name | Type           | Width | Description                                     |
+#        -----------------------------------------------------------------------------------------
+#        | Name       | String         |  30   | User's name                                     |
+#        | Income     | Double         |  15   | User's income monthly                           |
+#        | Expense    | Double (Array) |  4    | Food, transportation, entertainment, debts/loans|
      
   - E) Ideal outcomes
      
