@@ -1,4 +1,5 @@
-# ENGG1340Project -- Topic: Accounting system
+# ENGG1340Project -- Topic: Accounting system 
+# Group no.: 116
 
 **Platform: C++**
 
