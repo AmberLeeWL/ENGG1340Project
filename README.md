@@ -12,7 +12,7 @@
       - To see his/her own financial reports</p> 
      
   - B) Problem Setting
-       <p>The program is to handle multiple functions on managing financial records. </p> 
+       <p>The program is to handle multiple functions on managing financial records. The targeted group of users can be working forces and students with part-time or intern jobs. </p> 
      
   - C) Assumptions
        1. Assumptions on fields listed in "Width" in Data structures
@@ -24,7 +24,8 @@
         | Field Name | Type              | Width  | Description                                             |
         -----------------------------------------------------------------------------------------------------
         | Name       | String            | 30     | User's name                                             |
-        | Income     | Double            | 15     | User's income monthly (Max: XXXXXXXXXXXXX.XX)           |
+        | Occupation | String            | 30     | User's occupation                                       |
+        | Income     | String (2D-Array) | 3(15)  | Income monthly & other sources (Max: XXXXXXXXXXXXX.XX)  |
         | Expense    | String (2D-Array) | 4(50)  | Rents, food, transportation, entertainment, debts/loans |
         | Budget     | Double            | 15     | Budget of the month (Max: XXXXXXXXXXXXX.XX)             |
         | Account    | String (2D-Array) | 3(50)  | Cash, bank card, credit card with account balance       |
@@ -35,7 +36,8 @@
         | Field Name | Type              | Width  | Description                                             |
         -----------------------------------------------------------------------------------------------------
         | Name       | String            | 30     | User's name                                             |
-        | Income     | Double            | 15     | User's income monthly (Max: XXXXXXXXXXXXX.XX)           |
+        | Occupation | String            | 30     | User's occupation                                       |
+        | Income     | Double (2D-Array) | 3(15)  | Income monthly & other sources (Max: XXXXXXXXXXXXX.XX)  |
         | Expense    | String (2D-Array) | 5(50)  | Rents, food, transportation, entertainment, debts/loans |
         | Budget     | Double            | 15     | Budget of the month (Max: XXXXXXXXXXXXX.XX)             |
         | Account    | String (Array)    | 3(50)  | Cash, bank card, credit card with account balance       |
@@ -59,6 +61,7 @@
   - Other possible feature(s):
   7) Combining records of users (family incomes and expenses view)
   8) Login function
+  9) Setting proportions of expenses by the occupation of the user
 
 **Expected files and source codes:**
   1. <username>.txt
@@ -93,6 +96,7 @@
      |                                            -Add-                                            |
      |---------------------------------------------------------------------------------------------|
      | Please enter new username             :                                                     |
+     | Please enter occupation               :                                                     |
      | Please enter monthly income           :                                                     |
      | Please enter expense on rent          :                                                     |
      | Please enter expense on food          :                                                     |
@@ -127,6 +131,7 @@
      | Confirm (Y/N):                                                                              |
      |---------------------------------------------------------------------------------------------|
      | Username                 :                                                                  |
+     | Occupation               :                                                                  |
      | Monthly income           :                                                                  |
      | Expense on rent          :                                                                  |
      | Expense on food          :                                                                  |
@@ -138,12 +143,12 @@
      | Balance of bank card     :                                                                  |
      | Balance of credit card   :                                                                  |
      |---------------------------------------------------------------------------------------------|
-     | 1. Username                    2. Monthly income                 3. Expense on rent         |
-     | 4. Expense on food             5. Expense on transportation      6. Expense on entertainment|
-     | 7. Expense on debts/loans      8. Budget                         9. Amount of cash in hand  |
-     | 10. Balance of bank card       11. Balance of credit card                                   |
+     | 1. Username                    2. Occupation                   3. Monthly income            |
+     | 4. Expense on rent             5. Expense on food              6. Expense on transportation |
+     | 7. Expense on entertainment    8. Expense on debts/loans       9. Budget                    |
+     | 10.Amount of cash in hand      11. Balance of bank card        12. Balance of credit card   |
      |                                                                                             |
-     | Please choose what to be edited (1-11):                                                     |
+     | Please choose what to be edited (1-12):                                                     |
      |  .                                                                                          |
      |  .                                                                                          |
      |  .                                                                                          |
@@ -168,6 +173,8 @@
      |                             -Statistical Report of <username>-                              |
      |---------------------------------------------------------------------------------------------|
      | Date of printing: dd/mm/yyyy                                                                |
+     |---------------------------------------------------------------------------------------------|
+     | Occupation:                                                                                 |
      |_____________________________________________________________________________________________|
      |                                                       |      Incomes     |     Expenses     |
      |---------------------------------------------------------------------------------------------|
