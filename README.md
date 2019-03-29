@@ -21,11 +21,12 @@
   
   - B) Data structures
        - A) User file (<username>.txt)
-            <p> The user file is to store the information of the user. Every user will have his/her own .txt file to show his/her personal information.</p>
+            <p> The user file is used to store the information of the user. Every user will have his/her own .txt file to show his/her personal information.</p>
        
         | Field Name | Type              | Width  | Description                                             |
         -----------------------------------------------------------------------------------------------------
         | Name       | String            | 30     | User's name                                             |
+        | Password   | Double            | 10     | User's password                                         |
         | Occupation | String            | 30     | User's occupation                                       |
         | Income     | String (2D-Array) | 3(15)  | Income monthly & other sources (Max: XXXXXXXXXXXXX.XX)  |
         | Expense    | String (2D-Array) | 4(50)  | Rents, food, transportation, entertainment, debts/loans |
@@ -51,7 +52,7 @@
         | PDate      | String            | 10     | Date of printing (dd/mm/yyyy)                           |
      
   - C) Ideal outcomes
-       <p>The ideal outcomes of the program is to provide the user a clear user manual and report </p>
+       <p>The ideal outcomes of the program is to provide the user a clear user manual and report. </p>
      
 **Program Features:**
   1) Adding records of income and expenses
@@ -76,6 +77,7 @@
      |                             -Welcome to Accounting System v0.1-                             |
      |---------------------------------------------------------------------------------------------|
      | Please enter your name:                                                                     |
+     | Password:                                                                                   |
      |---------------------------------------------------------------------------------------------|
      | Hello, <username> !                                                                         |
      |                                                                                             |
