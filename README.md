@@ -4,20 +4,22 @@
 **Platform: C++**
 
 **Problem Statement:**
-  - A) Purpose
-       <p>To provide the user a more efficient way to edit and view financial records. The program can automatically warn   the user if the expenses reach the budget. Using the program, the user is expected to enjoy some basic functions: 
+       <p>Personal finance problems have never stopped especially since the introduction of online shopping which stimulates over million of impulse buying every day. As a result, personal finance management becomes a lesson for people with different walks of life. It would be great if people can manage their finance records everytime and everywhere efficiently. However, different personal finance apps have the edge over each other (e.g. calendar, memo, photo). It is difficult for users to choose the best finance management tools among them. Therefore, we are going to develop an accounting system which provides the user the most efficient way to manage personal financial status. The program can automatically warn the user if the expenses reach the budget. Using the program, the user is expected to enjoy some basic functions: 
   
-      - To add, delete, edit records;
-      - To view the reocords according to his/her preference;
-      - To see his/her own financial reports</p> 
+      - To add, delete, edit records
+      - To view the records according to his/her preference
+      - To see his/her own financial reports
+      - To be alerted when expenses reach the budget set
+      - Password protection 
+</p> 
      
-  - B) Problem Setting
+**Problem Setting**
        <p>The program is to handle multiple functions on managing financial records. The targeted group of users can be working forces and students with part-time or intern jobs. </p> 
      
-  - C) Assumptions
+  - A) Assumptions
        1. Assumptions on fields listed in "Width" in Data structures
   
-  - D) Data structures
+  - B) Data structures
        - A) User file (<username>.txt)
             <p> The user file is to store the information of the user. Every user will have his/her own .txt file to show his/her personal information.</p>
        
@@ -48,7 +50,7 @@
         | Percentage | Double            | 5      | Percentage of area of expenses                          |
         | PDate      | String            | 10     | Date of printing (dd/mm/yyyy)                           |
      
-  - E) Ideal outcomes
+  - C) Ideal outcomes
        <p>The ideal outcomes of the program is to provide the user a clear user manual and report </p>
      
 **Program Features:**
@@ -60,7 +62,7 @@
   6) Warning for over budget
   - Other possible feature(s):
   7) Combining records of users (family incomes and expenses view)
-  8) Login function
+  8) Password login function
   9) Setting proportions of expenses by the occupation of the user
 
 **Expected files and source codes:**
