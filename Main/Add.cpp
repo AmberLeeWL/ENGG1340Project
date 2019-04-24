@@ -10,9 +10,7 @@
 
 using namespace std;
 
-const int stdwidth = 69;
-const char userinfofilename[80] = "UserInfo.txt";
-const char userfilename[80] = "User.txt";
+const int add_stdwidth = 69;
 
 struct userinfo{
     char Name[40];
@@ -26,8 +24,8 @@ struct userinfo{
 };
 
 void printbreak(){
-    for (int i=0;i<stdwidth;i++){
-        if (i==stdwidth-1){
+    for (int i=0;i<add_stdwidth;i++){
+        if (i==add_stdwidth-1){
             cout << '-'<<endl;
         }
         else {
@@ -36,7 +34,7 @@ void printbreak(){
     }
 }
 
-int main(){
+int Add(string userfilename,string userinfoname){
     bool confirm = false;
     ofstream fuser;
     ofstream fout;
