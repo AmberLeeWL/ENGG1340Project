@@ -20,36 +20,44 @@
        1. Assumptions on fields listed in "Width" in Data structures
   
   - B) Data structures
-       - A) User file (<username>.txt)
-            <p> The user file is used to store the information of the user. Every user will have his/her own .txt file to show his/her personal information.</p>
+       - A) User file (User.txt)
+            <p> The user file is used to store the usernames and passwords of the users. </p>
+            
+        | Field Name | Type              | Width  | Description                                             |
+        -----------------------------------------------------------------------------------------------------
+        | Name       | Char              | 30     | User's name                                             |
+        | Password   | Char              | 10     | User's password                                         |
+
+       - B) User information file (UserInfo.txt)
+            <p> The user information file is used to store the information of all the users. </p>
        
         | Field Name | Type              | Width  | Description                                             |
         -----------------------------------------------------------------------------------------------------
-        | Name       | String            | 30     | User's name                                             |
-        | Password   | Double            | 10     | User's password                                         |
-        | Occupation | String            | 30     | User's occupation                                       |
-        | Income     | String (2D-Array) | 3(15)  | Income monthly & other sources (Max: XXXXXXXXXXXXX.XX)  |
-        | Expense    | String (2D-Array) | 4(50)  | Rents, food, transportation, entertainment, debts/loans |
+        | Name       | Char              | 30     | User's name                                             |
+        | Password   | Char              | 10     | User's password                                         |
+        | Occupation | Char              | 30     | User's occupation                                       |
+        | Income     | Double (Array)    | 3      | Income monthly & other sources (Max: XXXXXXXXXXXXX.XX)  |
+        | Expense    | Double (Array)    | 5      | Rents, food, transportation, entertainment, debts/loans |
         | Budget     | Double            | 15     | Budget of the month (Max: XXXXXXXXXXXXX.XX)             |
-        | Account    | String (2D-Array) | 3(50)  | Cash, bank card, credit card with account balance       |
-        | MDate      | String            | 10     | Date of last modified (dd/mm/yyyy)                      |
+        | Account    | Double (Array)    | 3      | Cash, bank card, credit card with account balance       |
+        | MDate      | String            | 10     | Date of last modified (ss:mm:hh dd/mm/yyyy)             |
         
-       - B) Statistical report to user (report_<username>.txt)
+       - C) Statistical report to user (report_<username>.txt)
         
         | Field Name | Type              | Width  | Description                                             |
         -----------------------------------------------------------------------------------------------------
-        | Name       | String            | 30     | User's name                                             |
-        | Occupation | String            | 30     | User's occupation                                       |
-        | Income     | Double (2D-Array) | 3(15)  | Income monthly & other sources (Max: XXXXXXXXXXXXX.XX)  |
-        | Expense    | String (2D-Array) | 5(50)  | Rents, food, transportation, entertainment, debts/loans |
+        | Name       | Char              | 30     | User's name                                             |
+        | Occupation | Char              | 30     | User's occupation                                       |
+        | Income     | Double (Array)    | 3      | Income monthly & other sources (Max: XXXXXXXXXXXXX.XX)  |
+        | Expense    | Double (Array)    | 5      | Rents, food, transportation, entertainment, debts/loans |
         | Budget     | Double            | 15     | Budget of the month (Max: XXXXXXXXXXXXX.XX)             |
-        | Account    | String (Array)    | 3(50)  | Cash, bank card, credit card with account balance       |
-        | Date       | String            | 10     | dd/mm/yyyy; Last modified                               |
+        | Account    | String (Array)    | 3      | Cash, bank card, credit card with account balance       |
+        | Date       | String            | 10     | ss:mm:hh dd/mm/yyyy; Last modified                      |
         | E_Sum      | Double            | 10     | Total expense of the month                              |
         | BE_Diff    | Double            | 10     | Difference between total expense and budget             |
         | Warn       | Boolean           | 1      | True if BE_diff is less than or equal to 0              |
         | Percentage | Double            | 5      | Percentage of area of expenses                          |
-        | PDate      | String            | 10     | Date of printing (dd/mm/yyyy)                           |
+        | PDate      | String            | 10     | Date of printing (ss:mm:hh dd/mm/yyyy)                  |
      
   - C) Ideal outcomes
        <p>The ideal outcomes of the program is to provide the user a clear user manual and report. </p>
@@ -67,14 +75,16 @@
   9) Setting proportions of expenses by the occupation of the user
 
 **Expected files and source codes:**
-  1. `<username>`.txt
-  2. `report_<username>`.txt
+  1. User.txt
+  2. UserInfo.txt
+  3. `report_<username>`.txt
   
 **Design**
   - User Manual
      ```
       _____________________________________________________________________________________________
      |                             -Welcome to Accounting System v0.1-                             |
+     |Last modified on: ss:mm:hh dd/mm/yyyy (<username>)                                           |
      |---------------------------------------------------------------------------------------------|
      | Please enter your name    :                                                                 |
      | Please enter your password:                                                                 |
@@ -89,7 +99,7 @@
      |  .                                                                                          |
      |  .                                                                                          |
      |  .                                                                                          |
-     |  Last modified on: dd/mm/yyyy                                                               |
+     |  Last modified on: ss:mm:hh dd/mm/yyyy                                                      |
      |                                                                                             |
      |  Thank you for using the system, bye!                                                       |
      |_____________________________________________________________________________________________|
@@ -111,6 +121,8 @@
      | Please enter amount of cash in hand   :                                                     |
      | Please enter balance of bank card     :                                                     |
      | Please enter blance of credit card    :                                                     |
+     |                                                                                             |
+     | Please confirm your information(Y/N)  :                                                     |
      |                                                                                             |
      | New user <username> added!                                                                  |
      |_____________________________________________________________________________________________|
@@ -176,7 +188,7 @@
       _____________________________________________________________________________________________
      |                             -Statistical Report of <username>-                              |
      |---------------------------------------------------------------------------------------------|
-     | Date of printing: dd/mm/yyyy                                                                |
+     | Date of printing: ss:mm:hh dd/mm/yyyy                                                       |
      |---------------------------------------------------------------------------------------------|
      | Occupation:                                                                                 |
      |_____________________________________________________________________________________________|
