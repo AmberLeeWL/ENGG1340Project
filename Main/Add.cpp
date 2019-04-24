@@ -84,6 +84,7 @@ int main(){
             cin >> user.Account[1];
             cout << "Please enter blance of credit card    : ";
             cin >> user.Account[2];
+            cout << " " << endl;
             cout << "Please confirm your information(Y/N): ";
             cin >> choice;
             if (choice == 'Y' || choice == 'y'){
