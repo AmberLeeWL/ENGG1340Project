@@ -20,7 +20,7 @@ struct userinfo{
     string Mdate;
 };
 
-int main(){
+int print_main(){
     ofstream fout;
     string date = "";
     struct user;
