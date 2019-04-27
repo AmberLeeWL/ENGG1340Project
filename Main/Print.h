@@ -1,19 +1,12 @@
-#include <iostream>
-#include <iomanip>
-#include <string>
-#include <list>
-#include <ctime>
-#include <fstream>
+// Print.h
 
-struct userinfo{
-    char Name[40];
-    char Password[30];
-    char Occupation[30];
-    double Income;
-    double Expense[5];
-    double Budget;
-    double Account[3];
-    string Mdate;
-};
+#ifndef Header_h
+#define Header_h
 
-int print_main();
+#include "src.h"
+
+using namespace std;
+
+int print_main(userinfo user);
+
+#endif 
