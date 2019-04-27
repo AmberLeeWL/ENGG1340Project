@@ -3,6 +3,8 @@
 #include "src.h"
 #include "Add.cpp"
 #include "Print.cpp"
+#include "Edit.cpp"
+#include "Delete.cpp"
 
 using namespace std;
 
