@@ -7,8 +7,6 @@
 #include <ctime>
 #include <fstream>
 
-const int add_stdwidth = 69;
-
 struct userinfo{
     char Name[40];
     char Password[30];
