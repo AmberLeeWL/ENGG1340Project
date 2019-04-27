@@ -94,7 +94,7 @@ int Edit(string userfilename,string userinfoname){
       cout << "Balance of bank card     : " <<  << endl;
       cout << "Balance of credit card   : " <<  << endl;
         
-        
+      printbreak();
       printoption();
       cout << "Please choose what to be edited (1-12): ";
       cin >> option;  
@@ -112,5 +112,8 @@ int Edit(string userfilename,string userinfoname){
             case 11:
             case 12:
     }
+    fout.close();
+    fuser.close();
+      
     return 0;
 }
