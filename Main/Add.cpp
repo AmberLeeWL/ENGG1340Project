@@ -54,13 +54,10 @@ int add_main(string userinfoname, string userfilename){
             cin >> user.Account[2];
             cout << "Please confirm your information(Y/N): ";
             cin >> choice;
-            while (choice != 'Y' || choice != 'y' || choice != 'N' ||choice != 'n' ){
-                cout << "Please confirm your information(Y/N): ";
-                cin >> choice;
-            }
+            cout << "Please confirm your information(Y/N): ";
+            cin >> choice;
             if (choice == 'Y' || choice == 'y'){
                 confirm = true;
-                break;
             }
         }
         fuser << user.Name << endl;
