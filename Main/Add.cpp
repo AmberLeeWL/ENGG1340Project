@@ -1,42 +1,14 @@
 //Add record function
 
-#include <iostream>
-#include <iomanip>
-#include <string>
-#include <list>
-#include <ctime>
-#include <fstream>
-
+#include "src.h"
 
 using namespace std;
 
-struct userinfo{
-    char Name[40];
-    char Password[30];
-    char Occupation[30];
-    double Income;
-    double Expense[5];
-    double Budget;
-    double Account[3];
-    string Mdate;
-};
-
-void printbreak(){
-    for (int i=0;i<69;i++){
-        if (i==68){
-            cout << '-'<<endl;
-        }
-        else {
-            cout << '-';
-        }
-    }
-}
-
-int Add(string userfilename,string userinfoname){
+int add_main(string userinfoname, string userfilename){
+    userinfo user;
     bool confirm = false;
     ofstream fuser;
     ofstream fout;
-    userinfo user;
     
     cout << setw(42);
     cout << "-Add Record-" << endl;
@@ -45,9 +17,9 @@ int Add(string userfilename,string userinfoname){
         cout << "Error in opening file " << userfilename << endl;
         exit(1);
     }
-    fuser.open(userinfofilename,ios::app);
+    fuser.open(userinfoname,ios::app);
     if ( fuser.fail() ) {
-        cout << "Error in opening file " << userinfofilename << endl;
+        cout << "Error in opening file " << userinfoname << endl;
         exit(1);
     }
     else{
@@ -78,13 +50,17 @@ int Add(string userfilename,string userinfoname){
             cin >> user.Account[0];
             cout << "Please enter balance of bank card     : ";
             cin >> user.Account[1];
-            cout << "Please enter blance of credit card    : ";
+            cout << "Please enter balance of credit card    : ";
             cin >> user.Account[2];
-            cout << " " << endl;
             cout << "Please confirm your information(Y/N): ";
             cin >> choice;
+            while (choice != 'Y' || choice != 'y' || choice != 'N' ||choice != 'n' ){
+                cout << "Please confirm your information(Y/N): ";
+                cin >> choice;
+            }
             if (choice == 'Y' || choice == 'y'){
                 confirm = true;
+                break;
             }
         }
         fuser << user.Name << endl;
@@ -104,6 +80,8 @@ int Add(string userfilename,string userinfoname){
     }
     fout.close();
     fuser.close();
+    printbreak();
+    cout << "New user " << user.Name << " added!" << endl;
     
     return 0;
 }
