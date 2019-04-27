@@ -1,8 +1,8 @@
 //main.cpp
 
 #include "src.h"
-#include "add.cpp"
-#include "print.h"
+#include "Add.cpp"
+#include "Print.cpp"
 
 using namespace std;
 
