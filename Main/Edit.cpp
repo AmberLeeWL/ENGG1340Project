@@ -51,6 +51,7 @@ void printbreak(){
 
 int Edit(string userfilename,string userinfoname){
     char choice, username;
+    string line;
     int option=0;
     ofstream fout;
     ofstream fuser;
@@ -74,11 +75,8 @@ int Edit(string userfilename,string userinfoname){
       cin >> username;
       cout << "Confirm (Y/N): ";
       cin >> choice;
-      if (choice == 'Y' || choice =='y'){
-         confirm == true;
-      }
-      else{
-          return 0;
+      if (choice != 'Y' && choice !='y'){
+         return 0;
       }
       printbreak();
       cout << "User name                : " <<  << endl;
@@ -93,13 +91,12 @@ int Edit(string userfilename,string userinfoname){
       cout << "Amount of cash in hand   : " <<  << endl;
       cout << "Balance of bank card     : " <<  << endl;
       cout << "Balance of credit card   : " <<  << endl;
-        
       printbreak();
       printoption();
       cout << "Please choose what to be edited (1-12): ";
       cin >> option;  
       switch(option){
-            case 1:   
+            case 1:
             case 2:
             case 3:
             case 4:
