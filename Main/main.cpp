@@ -38,8 +38,8 @@ string quit(){
 }
 
 int main(){
-    char username[30];
-    char password[20];
+    string username;
+    string password];
     int option=0;
     string temp,in_date,out_date;
     ifstream fin;
