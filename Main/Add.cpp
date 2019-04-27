@@ -10,8 +10,6 @@
 
 using namespace std;
 
-const int add_stdwidth = 69;
-
 struct userinfo{
     char Name[40];
     char Password[30];
@@ -24,8 +22,8 @@ struct userinfo{
 };
 
 void printbreak(){
-    for (int i=0;i<add_stdwidth;i++){
-        if (i==add_stdwidth-1){
+    for (int i=0;i<69;i++){
+        if (i==68){
             cout << '-'<<endl;
         }
         else {
