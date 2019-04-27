@@ -11,6 +11,22 @@ struct userlogin{
     string p;
 };
 
+void editfunction(char userfilename, char userinfoname, userinfo user) {
+    cout << "Please enter the user name";
+    cin >> username;
+    if (userfilename != username){
+        cout << "Unvalid username";
+        return 0;
+    }
+    else{
+        for (int i=0; ;i++) {
+         
+        Edit(userfilename, userinfoname, user[i])
+        break; 
+}   
+
+
+
 void printoption(){
     cout << "Functions available: " << endl;
     cout << left << setw(20) << "1. Add record";
@@ -161,7 +177,7 @@ int main(){
     switch(option){
         case 1: add_main(userinfoname,userfilename);
         case 2: Delete(userfilename,userinfoname);
-        case 3: Edit(userfilename,userinfoname); 
+        case 3: editfunction(userfilename, userinfoname, userinfo user)
         case 4: print_main(user[u]);
         case 5: out_date = quit();
     }
