@@ -1,23 +1,13 @@
 //Add.h
 
-#include <iostream>
-#include <iomanip>
-#include <string>
-#include <list>
-#include <ctime>
-#include <fstream>
+#ifndef Header_h
+#define Header_h
 
-struct userinfo{
-    char Name[40];
-    char Password[30];
-    char Occupation[30];
-    double Income;
-    double Expense[5];
-    double Budget;
-    double Account[3];
-    string Mdate;
-};
+#include "src.h"
 
-void printbreak();
 
-int Add(string userfilename,string userinfoname);
+using namespace std;
+
+int add_main(string userinfofilename, string userfilename);
+
+#endif
