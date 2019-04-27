@@ -1,24 +1,8 @@
 //Delete record function
 
-#include <iostream>
-#include <iomanip>
-#include <string>
-#include <fstream>
+#include "src.h"
 
 using namespace std;
-
-const int add_stdwidth = 69;
-
-void printbreak() {
-  for (int i=0;i<add_stdwidth;i++){
-      if (i==add_stdwidth-1) {
-        cout << '-' <<endl;
-      }
-      else {
-           cout << '-';
-      }
-  }
-}
 
 int Delete(string userfilename,string userinfoname){
   ifstream fin;
