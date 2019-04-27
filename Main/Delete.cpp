@@ -37,10 +37,9 @@ int Delete(string userfilename,string userinfoname){
   }
   else{
     printbreak();
-      char choice;
+      char choice, username;
       cout << "Please enter the username going to be deleted: ";
       cin >> username;
-      
       cout << "Confirm (Y/N): " ;
       cin >> choice;
       if (choice == 'Y' || choice == 'y'){
