@@ -103,9 +103,10 @@ int Edit(string userfilename,string userinfoname, user[]){
             case 12:
                 cin >> user.Account[2];
                 break;
+      }
+      cout << "User <username> edited!";
+      fout.close();
+      fuser.close();
     }
-    fout.close();
-    fuser.close();
-      
     return 0;
 }
