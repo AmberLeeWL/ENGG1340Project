@@ -95,6 +95,9 @@ int print_main(userinfo user){
     }
     fout << "Budget of the month" << setw(50) << setprecision(2) << user.Budget << "|"<< endl;
     fout << "Budget balance" << setw(55) << setprecision(2) << user.Budget-etotal << "|"<< endl;
+    if ((user.Budget-etotal)<0){
+        fout << "Warning! There is a tendency of going over budget!" << endl;
+    }
     fout << " " << setw(68) << "|" <<endl;
     fout << "Percentage of expenses to monthly:" << endl;
     fout << "Percentage of rent expense           : " << setprecision(2) << (user.Expense[0]/user.Income)*100 << "%" << setw(23) << "|" << endl;
@@ -145,8 +148,11 @@ int print_main(userinfo user){
         printbreak();
         cout << "Total" << setw(64) << "|" << setprecision(2) << itotal << "|" << setprecision(2) << etotal << "|"<< endl;
         printbreak();
-        cout << "Budget of the month" << setw(50) << user.Budget << "|"<< endl;
-        cout << "Budget balance" << setw(55) << user.Budget-etotal << "|"<< endl;
+        cout << "Budget of the month" << setw(50) << setprecision(2) << user.Budget << "|"<< endl;
+        cout << "Budget balance" << setw(55) << setprecision(2) << user.Budget-etotal << "|"<< endl;
+        if ((user.Budget-etotal)<0){
+            cout << "Warning! There is a tendency of going over budget!" << endl;
+    }   }
         cout << " " << setw(68) << "|" <<endl;
         cout << "Percentage of expenses to monthly:" << endl;
         cout << "Percentage of rent expense           : " << setprecision(2) << (user.Expense[0]/user.Income)*100 << "%" << setw(23) << "|" << endl;
