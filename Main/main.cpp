@@ -167,6 +167,8 @@ int main(){
     }
     fout << out_date << " (" << username << ")" << endl;
     fin.close();
+    fuser.close();
+    finfo.close();
     fout.close();
     cout << " " << endl;
     return 0;
