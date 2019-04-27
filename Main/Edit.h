@@ -11,6 +11,6 @@ void printbreak();
 
 void printoption();
 
-int Edit(string userinfofilenmae, string userfilename);
+int Edit(string userinfofilenmae, string userfilename, user[]);
 
 #endif
