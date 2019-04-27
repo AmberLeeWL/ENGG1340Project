@@ -172,12 +172,19 @@ int main(){
         cout << "Please choose the functions(1-5): ";
         cin >> option;
     }
-    switch(option){
-        case 1: add_main(userinfoname,userfilename);
-        case 2: Delete(userfilename,userinfoname);
-        case 3: editfunction(userfilename, userinfoname, userinfo user);
-        case 4: print_main(user[u]);
-        case 5: out_date = quit();
+    while (option!=5){
+        switch(option){
+            case 1: add_main(userinfoname,userfilename);
+            case 2: Delete(userfilename,userinfoname);
+            case 3: editfunction(userfilename, userinfoname, userinfo user);
+            case 4: print_main(user[u]);
+        }
+        printoption;
+        cout << "Please choose the functions(1-5): ";
+        cin >> option;
+    }
+    if (option == 5){
+        out_date = quit();
     }
     fout << out_date << " (" << username << ")" << endl;
     fin.close();
@@ -185,5 +192,6 @@ int main(){
     finfo.close();
     fout.close();
     cout << " " << endl;
+    
     return 0;
 }
