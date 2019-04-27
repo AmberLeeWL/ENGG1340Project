@@ -7,9 +7,8 @@
        <p>Personal finance problems have never stopped especially since the introduction of online shopping which stimulates over million of impulse buying every day. As a result, personal finance management becomes a lesson for people with different walks of life. It would be great if people can manage their finance records everytime and everywhere efficiently. However, different personal finance apps have the edge over each other (e.g. calendar, memo, photo). It is difficult for users to choose the best finance management tools among them. Therefore, we are going to develop an accounting system which provides the user the most efficient way to manage personal financial status. The program can automatically warn the user if the expenses reach the budget. Using the program, the user is expected to enjoy some basic functions: 
   
       - To add, delete, edit records
-      - To view the records according to his/her preference
+      - To view the records in both the program or in text file
       - To see his/her own financial reports
-      - To be alerted when expenses reach the budget set
       - Password protection 
 </p> 
      
@@ -25,18 +24,18 @@
             
         | Field Name | Type              | Width  | Description                                             |
         -----------------------------------------------------------------------------------------------------
-        | Name       | Char              | 30     | User's name                                             |
-        | Password   | Char              | 10     | User's password                                         |
+        | Name       | string            | 30     | User's name                                             |
+        | Password   | string            | 10     | User's password                                         |
 
        - B) User information file (UserInfo.txt)
             <p> The user information file is used to store the information of all the users. </p>
        
         | Field Name | Type              | Width  | Description                                             |
         -----------------------------------------------------------------------------------------------------
-        | Name       | Char              | 30     | User's name                                             |
-        | Password   | Char              | 10     | User's password                                         |
-        | Occupation | Char              | 30     | User's occupation                                       |
-        | Income     | Double (Array)    | 3      | Income monthly & other sources (Max: XXXXXXXXXXXXX.XX)  |
+        | Name       | String            | 30     | User's name                                             |
+        | Password   | String            | 15     | User's password                                         |
+        | Occupation | String            | 30     | User's occupation                                       |
+        | Income     | Double (Array)    | 3      | Income monthly(Max: XXXXXXXXXXXXX.XX)                   |
         | Expense    | Double (Array)    | 5      | Rents, food, transportation, entertainment, debts/loans |
         | Budget     | Double            | 15     | Budget of the month (Max: XXXXXXXXXXXXX.XX)             |
         | Account    | Double (Array)    | 3      | Cash, bank card, credit card with account balance       |
@@ -46,18 +45,16 @@
         
         | Field Name | Type              | Width  | Description                                             |
         -----------------------------------------------------------------------------------------------------
-        | Name       | Char              | 30     | User's name                                             |
-        | Occupation | Char              | 30     | User's occupation                                       |
-        | Income     | Double (Array)    | 3      | Income monthly & other sources (Max: XXXXXXXXXXXXX.XX)  |
+        | Name       | String            | 30     | User's name                                             |
+        | Occupation | String            | 30     | User's occupation                                       |
+        | Income     | Double            | 15     | Income monthly(Max: XXXXXXXXXXXXX.XX)                   |
         | Expense    | Double (Array)    | 5      | Rents, food, transportation, entertainment, debts/loans |
         | Budget     | Double            | 15     | Budget of the month (Max: XXXXXXXXXXXXX.XX)             |
         | Account    | String (Array)    | 3      | Cash, bank card, credit card with account balance       |
         | Date       | String            | 10     | ss:mm:hh dd/mm/yyyy; Last modified                      |
-        | E_Sum      | Double            | 10     | Total expense of the month                              |
-        | BE_Diff    | Double            | 10     | Difference between total expense and budget             |
-        | Warn       | Boolean           | 1      | True if BE_diff is less than or equal to 0              |
-        | Percentage | Double            | 5      | Percentage of area of expenses                          |
-        | PDate      | String            | 10     | Date of printing (ss:mm:hh dd/mm/yyyy)                  |
+        | etotal     | Double            | 10     | Total liabilities of the month                          |
+        | itotal     | Double            | 10     | Total assets of the month                               |
+        | pdate      | String            | 10     | Date of printing (ss:mm:hh dd/mm/yyyy)                  |
      
   - C) Ideal outcomes
        <p>The ideal outcomes of the program is to provide the user a clear user manual and report. </p>
@@ -67,17 +64,15 @@
   2) Deleting current records
   3) Editing current records
   4) Setting budget
-  5) Printing statistical report of user (Allowing to print in detail or in breif format)
-  6) Warning for over budget
+  5) Printing statistical report of user
   - Other possible feature(s):
-  7) Combining records of users (family incomes and expenses view)
-  8) Password login function
-  9) Setting proportions of expenses by the occupation of the user
+  6) Password login function
 
 **Expected files and source codes:**
   1. User.txt
   2. UserInfo.txt
   3. `report_<username>`.txt
+  4. SystemLog.txt (To store the every login's time and user)
   
 **Design**
   - User Manual
