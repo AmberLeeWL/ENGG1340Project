@@ -20,7 +20,7 @@ void printoption(){
      cout << " " << endl;
 }
   
-int Edit(string userfilename,string userinfoname){
+int Edit(string userfilename,string userinfoname, user[]){
     char choice, username;
     string line;
     int option=0;
@@ -50,18 +50,18 @@ int Edit(string userfilename,string userinfoname){
          return 0;
       }
       printbreak();
-      cout << "User name                : " <<  << endl;
-      cout << "Occupation               : " <<  << endl;
-      cout << "Monthly income           : " <<  << endl;
-      cout << "Expense on rent          : " <<  << endl;
-      cout << "Expense on food          : " <<  << endl;
-      cout << "Expense on transportation: " <<  << endl;
-      cout << "Expense on entertainment : " <<  << endl;
-      cout << "Expense on debts/loans   : " <<  << endl;
-      cout << "Budget                   : " <<  << endl;
-      cout << "Amount of cash in hand   : " <<  << endl;
-      cout << "Balance of bank card     : " <<  << endl;
-      cout << "Balance of credit card   : " <<  << endl;
+      cout << "User name                : " << user.Name << endl;
+      cout << "Occupation               : " << user.Occupation << endl;
+      cout << "Monthly income           : " << user.Income << endl;
+      cout << "Expense on rent          : " << user.Expense[0] << endl;
+      cout << "Expense on food          : " << user.Expense[1] << endl;
+      cout << "Expense on transportation: " << user.Expense[2] << endl;
+      cout << "Expense on entertainment : " << user.Expense[3] << endl;
+      cout << "Expense on debts/loans   : " << user.Expense[4] << endl;
+      cout << "Budget                   : " << user.Budget << endl;
+      cout << "Amount of cash in hand   : " << user.Account[0] << endl;
+      cout << "Balance of bank card     : " << user.Account[1] << endl;
+      cout << "Balance of credit card   : " << user.Account[2] << endl;
       printbreak();
       printoption();
       cout << "Please choose what to be edited (1-12): ";
