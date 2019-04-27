@@ -21,8 +21,8 @@ const char userinfoname[80] = "UserInfo.txt";
 const int stdwidth = 69;
 
 struct userinfo{
-    char Name[40];
-    char Password[30];
+    string Name;
+    string Password];
     char Occupation[30];
     double Income;
     double Expense[5];
