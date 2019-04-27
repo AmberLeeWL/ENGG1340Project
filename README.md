@@ -180,7 +180,7 @@
      | View report here (Y/N):                                                                     |
      |_____________________________________________________________________________________________|
   
-  - Statistical report (In brief format)
+  - Statistical report
      ```
       _____________________________________________________________________________________________
      |                             -Statistical Report of <username>-                              |
@@ -189,7 +189,7 @@
      |---------------------------------------------------------------------------------------------|
      | Occupation:                                                                                 |
      |_____________________________________________________________________________________________|
-     |                                                       |      Incomes     |     Expenses     |
+     |                                                       |      Assets      |   Liabilities    |
      |---------------------------------------------------------------------------------------------|
      | Monthly Income                                        | XXXXXXXXXXXXX.XX |                  |
      | Expense on Rent                                       |                  | XXXXXXXXXXXXX.XX |
@@ -198,11 +198,17 @@
      | Expense on Entertainment                              |                  | XXXXXXXXXXXXX.XX |
      | Expense on Debts/Loans                                |                  | XXXXXXXXXXXXX.XX |
      |---------------------------------------------------------------------------------------------|
+     | Account balances:                                                                           |
+     | Cash in hand                                          | XXXXXXXXXXXXX.XX |                  |
+     | Balance of bank card                                  | XXXXXXXXXXXXX.XX |                  |
+     | Balance of credit card                                | XXXXXXXXXXXXX.XX |                  |
+     |---------------------------------------------------------------------------------------------|
      | Total                                                 | XXXXXXXXXXXXX.XX | XXXXXXXXXXXXX.XX |
      |---------------------------------------------------------------------------------------------|
      | Budget of the month                                                        XXXXXXXXXXXXX.XX |
      | Budget balance                                                             XXXXXXXXXXXXX.XX |
      |                                                                                             |
+     | Percentage of expenses to income:                                                           |
      | Percentage of rent expense           : XX.XX%                                               |
      | Percentage of food expense           : XX.XX%                                               |
      | Percentage of transportation expense : XX.XX%                                               |
