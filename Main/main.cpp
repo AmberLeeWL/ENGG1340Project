@@ -11,7 +11,7 @@ struct userlogin{
     string p;
 };
 
-void editfunction(char userfilename, char userinfoname, userinfo user) {
+void editfunction(char userfilename, char userinfoname, userinfo user[]) {
     cout << "Please enter the user name";
     cin >> username;
     if (userfilename != username){
@@ -19,9 +19,18 @@ void editfunction(char userfilename, char userinfoname, userinfo user) {
         return 0;
     }
     else{
-        for (int i=0; ;i++) {
+        for (int i=0;i<MAX_data;i++) {
+            if (user[i].Name == username){
+                Edit(userfilename, userinfoname, user[i]);
+                break;
+            }
+        }
+    }
+}
+               
          
-        Edit(userfilename, userinfoname, user[i])
+         
+        Edit(userfilename, userinfoname, user[i]);
         break; 
 }   
 
@@ -177,7 +186,7 @@ int main(){
     switch(option){
         case 1: add_main(userinfoname,userfilename);
         case 2: Delete(userfilename,userinfoname);
-        case 3: editfunction(userfilename, userinfoname, userinfo user)
+        case 3: editfunction(userfilename, userinfoname, userinfo user);
         case 4: print_main(user[u]);
         case 5: out_date = quit();
     }
