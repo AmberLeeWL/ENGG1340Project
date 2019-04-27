@@ -160,7 +160,7 @@ int main(){
     }
     switch(option){
         case 1: add_main(userinfoname,userfilename);
-        case 2: cout << "Heading to \"2. Delete record\"" << "..." << endl;// To be replaced by Delete.cpp
+        case 2: Delete(userfilename,userinfoname);// To be replaced by Delete.cpp
         case 3: cout << "Heading to \"3. Edit record\"" << "..." << endl; // To be replaced by Edit.cpp
         case 4: print_main(user[u]);
         case 5: out_date = quit();
