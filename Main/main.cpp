@@ -13,23 +13,17 @@ struct userlogin{
     string p;
 };
 
-void editfunction(char userfilename, char userinfoname, userinfo user[]) {
+void editfunction(char userfilename, char userinfoname, userinfo user[],int count) {
+    string target;
     cout << "Please enter the user name";
-    cin >> username;
-    if (userfilename != username){
-        cout << "Unvalid username";
-        return 0;
-    }
-    else{
-        for (int i=0;i<MAX_data;i++) {
-            if (user[i].Name == username){
-                Edit(userfilename, userinfoname, user[i]);
-                break;
-            }
+    cin >> target;
+    for (int i=0;i<count;i++){
+        if (user[i].Name == target){
+            Edit(userfilename, userinfoname, user[i]);
         }
     }
+    else cout << target << " not found!" << endl;
 }
-
 
 void printoption(){
     cout << "Functions available: " << endl;
