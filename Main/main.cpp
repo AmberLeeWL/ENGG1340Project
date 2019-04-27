@@ -27,13 +27,6 @@ void editfunction(char userfilename, char userinfoname, userinfo user[]) {
         }
     }
 }
-               
-         
-         
-        Edit(userfilename, userinfoname, user[i]);
-        break; 
-}   
-
 
 
 void printoption(){
