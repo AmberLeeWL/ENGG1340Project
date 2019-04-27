@@ -16,6 +16,8 @@ struct userlogin{
 
 void printoption();
 
+void editfunction(char userfilename, char userinfoname, userinfo user[]);
+
 string quit();
 
 int main();
