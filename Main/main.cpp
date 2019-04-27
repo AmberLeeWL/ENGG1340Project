@@ -160,8 +160,8 @@ int main(){
     }
     switch(option){
         case 1: add_main(userinfoname,userfilename);
-        case 2: Delete(userfilename,userinfoname);// To be replaced by Delete.cpp
-        case 3: cout << "Heading to \"3. Edit record\"" << "..." << endl; // To be replaced by Edit.cpp
+        case 2: Delete(userfilename,userinfoname);
+        case 3: Edit(userfilename,userinfoname); 
         case 4: print_main(user[u]);
         case 5: out_date = quit();
     }
