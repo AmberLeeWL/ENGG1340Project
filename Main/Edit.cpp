@@ -69,28 +69,40 @@ int Edit(string userfilename,string userinfoname, user[]){
       switch(option){
             case 1: 
                 cin >> user.Name;
+                break;
             case 2:
                 cin >> user.Occupation;
+                break;
             case 3:
                 cin >> user.Income;
+                break;
             case 4:
                 cin >> user.Expense[0];
+                break;
             case 5:
-                cin >> user.Expense[1]
+                cin >> user.Expense[1];
+                break;
             case 6:
-                cin >> user.Expense[2]
+                cin >> user.Expense[2];
+                break;
             case 7:
-                cin >> user.Expense[3]
+                cin >> user.Expense[3];
+                break;
             case 8:
-                cin >> user.Expense[4]
+                cin >> user.Expense[4];
+                break;
             case 9:
                 cin >> user.Budget;
+                break;
             case 10:
                 cin >> user.Account[0];
+                break;
             case 11:
                 cin >> user.Account[1];
+                break;
             case 12:
                 cin >> user.Account[2];
+                break;
     }
     fout.close();
     fuser.close();
